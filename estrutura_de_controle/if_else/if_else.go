@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 func imprimirResultado(nota float64) string {
 	if nota >= 7 {
@@ -24,9 +28,21 @@ func notaParaConceito(nota float64) string {
 	}
 }
 
+func numeroAleatorio() int {
+	s := rand.NewSource(time.Now().UnixNano())
+	r := rand.New(s)
+	return r.Intn(10)
+}
+
 func main() {
 	fmt.Println(imprimirResultado(7.9))
 	fmt.Println(imprimirResultado(4.9))
 
 	fmt.Println(notaParaConceito(7.9))
+
+	if i := numeroAleatorio(); i%2 == 0 {
+		fmt.Println("Par")
+	} else {
+		fmt.Println("Impar")
+	}
 }
