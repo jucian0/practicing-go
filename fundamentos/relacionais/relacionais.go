@@ -24,7 +24,7 @@ func main() {
 	fmt.Println("Datas", d1 != d2)
 	fmt.Println("Datas", d1.Equal(d2))
 
-	type Pessoa {
+	type Pessoa struct {
 		Nome string
 	}
 
