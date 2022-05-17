@@ -31,5 +31,5 @@ func main() {
 	p1 := Pessoa{"Nome 1"}
 	p2 := Pessoa{"Nome 2"}
 
-	fmt.Println("Pessoas", p1 == p2)
+	fmt.Println("Pessoas:", p1 == p2)
 }
