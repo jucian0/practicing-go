@@ -18,4 +18,8 @@ func main() {
 	s = append(s, 1, 2, 3, 4, 5)
 
 	fmt.Println(s, len(s), cap(s))
+
+	s = append(s, make([]int, 35)...) // adiciona mais um slice
+
+	fmt.Println(s, len(s), cap(s))
 }
